@@ -17,3 +17,6 @@ Use the `/capture-testimony` command from the [policy-development-assistant plug
 | Date | Policy area | Testimony |
 |------|-------------|-----------|
 | 2026-07-23 | rental-market | [A Decade of Renting in Israel](./2026-07-23-rental-market.md) |
+| 2026-07-23 | political-accountability | [A Politics That Mocks the Working Citizen](./2026-07-23-political-accountability.md) |
+| 2026-07-23 | citizens-first | [A State That Must Put Its Own Citizens First](./2026-07-23-citizens-first.md) |
+| 2026-07-23 | public-transport | [Public Transport That Punishes the People Who Use It](./2026-07-23-public-transport.md) |
