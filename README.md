@@ -75,6 +75,8 @@ Live status. Full task tracking in **[TASKS.md](./TASKS.md)**.
 | **[Public transport & the commute](./policy/public-transport/)** | ✅ | 🟡 3 / 5 | ⬜ | ⬜ |
 | **[Political accountability](./policy/political-accountability/)** | ✅ | ⬜ | ⬜ | ⬜ |
 | **[Citizens first](./policy/citizens-first/)** | ✅ | ⬜ | ⬜ | ⬜ |
+| **[Open government data](./policy/open-government-data/)** | ✅ | ⬜ | ⬜ | ⬜ |
+| **[Environmental quality — air & noise](./policy/environmental-quality/)** | ✅ | ⬜ | ⬜ | ⬜ |
 
 ✅ complete · 🟡 in progress · ⬜ not started
 
@@ -82,7 +84,7 @@ Live status. Full task tracking in **[TASKS.md](./TASKS.md)**.
 
 | | |
 |---|---|
-| **Testimonies** | [Rental market](./testimonies/2026-07-23-rental-market.md) · [Public transport](./testimonies/2026-07-23-public-transport.md) · [Political accountability](./testimonies/2026-07-23-political-accountability.md) · [Citizens first](./testimonies/2026-07-23-citizens-first.md) |
+| **Testimonies** | [Rental market](./testimonies/2026-07-23-rental-market.md) · [Public transport](./testimonies/2026-07-23-public-transport.md) · [Political accountability](./testimonies/2026-07-23-political-accountability.md) · [Citizens first](./testimonies/2026-07-23-citizens-first.md) · [Open government data](./testimonies/2026-07-23-open-government-data.md) · [Environmental quality](./testimonies/2026-07-23-environmental-quality.md) |
 | **Evidence base** | [Rental — the law](./policy/rental-market/research/02-israeli-law.md) · [Rental — data](./policy/rental-market/research/04-data.md) · [Transport — problem](./policy/public-transport/research/01-problem-statement.md) · [Transport — comparative](./policy/public-transport/research/03-comparative.md) |
 | **Comparative cases** | [Germany · Deutschlandticket](./policy/public-transport/research/comparative/germany-deutschlandticket.md) · [Vienna (ended)](./policy/public-transport/research/comparative/vienna.md) · [Tallinn & Luxembourg](./policy/public-transport/research/comparative/tallinn-luxembourg.md) · [UK ORR](./policy/public-transport/research/comparative/united-kingdom-orr.md) |
 | **Method & context** | [PIPELINE.md](./PIPELINE.md) · [Context layer](./context/) · [Comparison matrices](./context/matrices/) · [The plugin](./plugins/policy-development-assistant/) |
