@@ -1,13 +1,25 @@
 # Policy area: Public transport, congestion & the dignity of the commute
 
-**Pipeline stage:** 1 — testimony captured. Research not yet started.
+**Pipeline stage:** 2 — research in progress.
 
 | Stage | Status |
 |-------|--------|
 | 1. Testimony | ✅ [2026-07-23 — Public Transport That Punishes the People Who Use It](../../testimonies/2026-07-23-public-transport.md) |
-| 2. Research (`research/`) | ⬜ pending — run `/research-policy public-transport` |
-| 3. Paper (`paper/`) | ⬜ pending |
+| 2. Research (`research/`) | 🟡 in progress — 3 of 5 documents |
+| 3. Paper (`paper/`) | ⬜ blocked on stage 2 |
 | 4. Platform section | ⬜ pending |
+
+### Research status
+
+| Document | Status |
+|----------|--------|
+| `01-problem-statement.md` | ✅ drafted |
+| `02-israeli-law.md` | ✅ drafted |
+| `03-comparative.md` + `comparative/` | ✅ drafted — 4 case studies: [Germany](./research/comparative/germany-deutschlandticket.md), [Vienna](./research/comparative/vienna.md), [Tallinn & Luxembourg](./research/comparative/tallinn-luxembourg.md), [UK ORR](./research/comparative/united-kingdom-orr.md) |
+| `04-data.md` | ⬜ not started |
+| `05-domestic-record.md` | ⬜ not started |
+
+The comparative section satisfies the instructive-failure requirement: Vienna's Klimaticket **ended**, with the price raised to ≈€461 from 1 January 2026 — a comparator that shows the sustainability problem with deep fare subsidy rather than only its benefits.
 
 ## Framing note
 

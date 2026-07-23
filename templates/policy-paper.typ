@@ -1,4 +1,4 @@
-// Claude for Knesset — policy paper house template
+// MK-Claude — policy paper house template
 // Usage (from a paper's .typ file):
 //   #import "../../../templates/policy-paper.typ": policy-paper, recommendation, tradeoff
 //   #show: policy-paper.with(
@@ -23,14 +23,14 @@
   subtitle: none,
   paper-no: "PP-000",
   date: none,
-  series: [Claude for Knesset · Policy Papers],
+  series: [MK-Claude · Policy Papers],
   abstract: none,
   key-findings: (),
   body,
 ) = {
   let datefmt = if date != none { date.display("[day padding:none] [month repr:long] [year]") } else { "" }
 
-  set document(title: title, author: "Claude for Knesset")
+  set document(title: title, author: "MK-Claude")
   set text(font: serif-stack, size: 10.5pt, fill: ink)
   set par(justify: true, leading: 0.72em)
 

@@ -1,8 +1,10 @@
-# Claude For Knesset 🇮🇱🤖
+# MK-Claude 🇮🇱🤖
 
 ![A cheerful robot addressing a crowd from a campaign podium](./assets/cover.jpg)
 
 *An AI-assisted political platform for a party that doesn't exist.*
+
+**MK** — *Member of Knesset*. Claude is not one, is not eligible to become one, and would lose its deposit.
 
 ## What is this?
 
@@ -59,15 +61,37 @@ The matrices exist to make the platform falsifiable. A proposal that turns out t
 The pipeline is automated by a Claude Code plugin shipped in this repo, **[policy-development-assistant](./plugins/policy-development-assistant/)**, with a command per stage (`/capture-testimony`, `/research-policy`, `/draft-paper`, `/update-platform`), a `policy-methodology` skill encoding the evidence standards, and a bundled MCP server ([israel-statistics-mcp](https://github.com/reuvenaor/israel-statistics-mcp)) giving Claude direct tool access to Israeli Central Bureau of Statistics (הלמ"ס) index data — no API key needed. Install it in your own project with:
 
 ```
-/plugin marketplace add danielrosehill/claude-for-knesset
-/plugin install policy-development-assistant@claude-for-knesset
+/plugin marketplace add danielrosehill/mk-claude
+/plugin install policy-development-assistant@mk-claude
 ```
 
 ## Policy areas
 
-| Area | Stage |
-|------|-------|
-| [Rental market & tenancy law](./policy/rental-market/) | 1 — testimony captured |
+Live status. Full task tracking in **[TASKS.md](./TASKS.md)**.
+
+| Area | Testimony | Research | Paper | Platform |
+|------|:---------:|:--------:|:-----:|:--------:|
+| **[Rental market & tenancy law](./policy/rental-market/)** | ✅ | 🟡 2 / 5 | ⬜ | ⬜ |
+| **[Public transport & the commute](./policy/public-transport/)** | ✅ | 🟡 3 / 5 | ⬜ | ⬜ |
+| **[Political accountability](./policy/political-accountability/)** | ✅ | ⬜ | ⬜ | ⬜ |
+| **[Citizens first](./policy/citizens-first/)** | ✅ | ⬜ | ⬜ | ⬜ |
+
+✅ complete · 🟡 in progress · ⬜ not started
+
+### Jump to
+
+| | |
+|---|---|
+| **Testimonies** | [Rental market](./testimonies/2026-07-23-rental-market.md) · [Public transport](./testimonies/2026-07-23-public-transport.md) · [Political accountability](./testimonies/2026-07-23-political-accountability.md) · [Citizens first](./testimonies/2026-07-23-citizens-first.md) |
+| **Evidence base** | [Rental — the law](./policy/rental-market/research/02-israeli-law.md) · [Rental — data](./policy/rental-market/research/04-data.md) · [Transport — problem](./policy/public-transport/research/01-problem-statement.md) · [Transport — comparative](./policy/public-transport/research/03-comparative.md) |
+| **Comparative cases** | [Germany · Deutschlandticket](./policy/public-transport/research/comparative/germany-deutschlandticket.md) · [Vienna (ended)](./policy/public-transport/research/comparative/vienna.md) · [Tallinn & Luxembourg](./policy/public-transport/research/comparative/tallinn-luxembourg.md) · [UK ORR](./policy/public-transport/research/comparative/united-kingdom-orr.md) |
+| **Method & context** | [PIPELINE.md](./PIPELINE.md) · [Context layer](./context/) · [Comparison matrices](./context/matrices/) · [The plugin](./plugins/policy-development-assistant/) |
+
+### Findings worth reading first
+
+- **The cost of moving is the fastest-growing burden on Israeli tenants.** CBS's brokerage/contract/insurance sub-index rose **73.4%** over the decade to Nov 2025, against **17.9%** general inflation — four times faster. [Evidence](./policy/rental-market/research/04-data.md)
+- **The 2017 Fair Rental Law's broker-fee provision failed, by the government's own admission** — a Ministry of Justice survey said so. [Evidence](./policy/rental-market/research/02-israeli-law.md)
+- **The counter-evidence we did not bury:** ~80% of renters reported satisfaction with their dwelling in 2022. [How we reconcile it](./policy/rental-market/research/04-data.md)
 
 ## Contributing
 

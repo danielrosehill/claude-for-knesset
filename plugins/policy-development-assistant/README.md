@@ -2,16 +2,16 @@
 
 A Claude Code plugin that turns first-person testimony into evidence-based, think-tank-quality policy papers — and ultimately a program for government.
 
-Built for (and shipped with) the [Claude for Knesset](https://github.com/danielrosehill/claude-for-knesset) experiment, but the pipeline is generic: it works for any project that wants to develop policy from lived experience, grounded in official statistics and actual legislation, with a paper trail.
+Built for (and shipped with) the [MK-Claude](https://github.com/danielrosehill/mk-claude) experiment, but the pipeline is generic: it works for any project that wants to develop policy from lived experience, grounded in official statistics and actual legislation, with a paper trail.
 
 ## Install
 
 ```
-/plugin marketplace add danielrosehill/claude-for-knesset
-/plugin install policy-development-assistant@claude-for-knesset
+/plugin marketplace add danielrosehill/mk-claude
+/plugin install policy-development-assistant@mk-claude
 ```
 
-(Inside the claude-for-knesset repo itself the plugin is pre-enabled via `.claude/settings.json`.)
+(Inside the mk-claude repo itself the plugin is pre-enabled via `.claude/settings.json`.)
 
 ## Requirements
 
