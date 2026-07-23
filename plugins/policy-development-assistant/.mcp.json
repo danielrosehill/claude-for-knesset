@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "israel-statistics": {
+      "command": "npx",
+      "args": ["-y", "@reuvenorg/israel-statistics-mcp"]
+    }
+  }
+}
