@@ -1,6 +1,12 @@
-# Raw testimony material never gets committed — cleaned versions only
-testimonies/raw/*
-!testimonies/raw/.gitkeep
+# Raw testimony material never gets committed — cleaned versions only.
+# Kept OUTSIDE the site content tree so it can never be published by accident.
+testimonies-raw/*
+!testimonies-raw/.gitkeep
 
 # Typst build cache
 **/.typst-cache/
+
+# Astro / node
+site/node_modules/
+site/dist/
+site/.astro/

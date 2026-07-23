@@ -1,0 +1,261 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { Image } from 'astro:assets';
+import cover from '../assets/cover.jpg';
+import { SITE, BASE } from '../../site.config.mjs';
+
+const base = import.meta.env.BASE_URL;
+const href = (p: string) => base.replace(/\/$/, '') + '/' + p.replace(/^\//, '');
+
+/**
+ * The manifesto's planks and how far each has actually got.
+ * Stage order: testimony → research → paper → manifesto.
+ * Keep in step with the status table in tasks.md — that file is the source of truth.
+ */
+const planks = [
+  {
+    title: 'Rental market & tenancy law',
+    slug: 'policy/rental-market/',
+    thesis:
+      'The tenant’s problem is less the monthly rent than the cost and frequency of the move — and the move recurs whenever a landlord declines to renew.',
+    stages: ['done', 'partial', 'todo', 'todo'],
+    state: 'Research · 2 of 5 documents',
+  },
+  {
+    title: 'Public transport & the commute',
+    slug: 'policy/public-transport/',
+    thesis:
+      'Israel argues transport as a capital-spending question. The decision to leave the car at home is made on cost, legibility and dignity — all of them regulatory, all of them cheap.',
+    stages: ['done', 'partial', 'todo', 'todo'],
+    state: 'Research · 3 of 5 documents',
+  },
+  {
+    title: 'Political accountability',
+    slug: 'policy/political-accountability/',
+    thesis:
+      'Every other plank asks what the state should do. This one asks why the system produces no answer at all — a closed-list system with no lever a voter can pull against any individual legislator.',
+    stages: ['done', 'todo', 'todo', 'todo'],
+    state: 'Testimony captured',
+  },
+  {
+    title: 'Citizens first',
+    slug: 'policy/citizens-first/',
+    thesis:
+      'Civil preparedness that failed under fire, alongside a growing apparatus whose declared beneficiary is world Jewry rather than the public that funds it. A reallocation proposal, not a critique.',
+    stages: ['done', 'todo', 'todo', 'todo'],
+    state: 'Testimony captured',
+  },
+  {
+    title: 'Open government data',
+    slug: 'policy/open-government-data/',
+    thesis:
+      'Israel has a freedom-of-information law and a data portal. It has stocked the infrastructure of transparency with datasets that hold no one to account.',
+    stages: ['done', 'todo', 'todo', 'todo'],
+    state: 'Testimony captured',
+  },
+  {
+    title: 'Environmental quality',
+    slug: 'policy/environmental-quality/',
+    thesis:
+      'A resident living through months of excavation cannot find out what was permitted, what mitigation was required, or whether anyone checks. Process failures have cheap fixes.',
+    stages: ['done', 'todo', 'todo', 'todo'],
+    state: 'Testimony captured',
+  },
+];
+
+const stageNames = ['Testimony', 'Research', 'Paper', 'Manifesto'];
+---
+
+<StarlightPage
+  frontmatter={{
+    title: 'MK-Claude',
+    template: 'splash',
+    tableOfContents: false,
+    head: [
+      // Starlight would render "MK-Claude | MK-Claude" here; the homepage wants its own.
+      {
+        tag: 'title',
+        content: 'MK-Claude — an AI-assisted political platform for Israel',
+      },
+      {
+        tag: 'meta',
+        attrs: { property: 'og:image', content: SITE + BASE + 'og.jpg' },
+      },
+    ],
+  }}
+>
+  <Image
+    src={cover}
+    alt="A cheerful robot addressing a crowd from a campaign podium"
+    widths={[480, 800, 1200]}
+    sizes="(max-width: 50rem) 100vw, 50rem"
+    loading="eager"
+    style="border-radius:0.75rem;margin-bottom:2rem;"
+  />
+
+  <p class="mk-lede">
+    Israel is heading into another election. This repository is an experiment in
+    what it would look like to build a political platform <strong>properly</strong> —
+    researched, costed, honest about its trade-offs, and written entirely in public
+    while it is still unfinished.
+  </p>
+
+  <p class="mk-lede" style="margin-top:1rem;">
+    <strong>MK</strong> — <em>Member of Knesset</em>. Claude is not one, is not eligible
+    to become one, and would lose its deposit.
+  </p>
+
+  <hr class="mk-rule" />
+
+  <div class="mk-section-head">
+    <h2>The manifesto, as it stands</h2>
+    <p>
+      Six planks. None has yet cleared the evidence bar that would let it into a program
+      for government — so this is the scaffolding, with every joint left visible.
+    </p>
+  </div>
+
+  <ul class="mk-planks">
+    {
+      planks.map((plank) => (
+        <li class="mk-plank">
+          <h3><a href={href(plank.slug)}>{plank.title}</a></h3>
+          <p>{plank.thesis}</p>
+          <div
+            class="mk-stages"
+            role="img"
+            aria-label={plank.stages
+              .map((s, i) => `${stageNames[i]}: ${s}`)
+              .join(', ')}
+          >
+            {plank.stages.map((s) => <span data-state={s} />)}
+          </div>
+          <span class="mk-state">{plank.state}</span>
+        </li>
+      ))
+    }
+  </ul>
+
+  <p style="text-align:center;margin-top:1.5rem;">
+    <a href={href('platform/')}>The program for government</a> stays empty until the first
+    plank clears stage&nbsp;3. <a href={href('tasks/')}>Everything blocking that is listed here</a>.
+  </p>
+
+  <hr class="mk-rule" />
+
+  <div class="mk-section-head">
+    <h2>How a plank gets written</h2>
+    <p>
+      Four stages, each with an artifact and a bar it must clear before the next one
+      starts. Nothing skips ahead.
+    </p>
+  </div>
+
+  <ol class="mk-steps">
+    <li>
+      <div>
+        <strong>Testimony</strong>
+        <span>
+          A dated, cleaned first-person account. Evidence of experience — never of
+          prevalence. Raw recordings stay out of the repository.{' '}
+          <a href={href('testimonies/')}>Read them</a>.
+        </span>
+      </div>
+    </li>
+    <li>
+      <div>
+        <strong>Evidence base</strong>
+        <span>
+          Five documents: the quantified problem, the Israeli law and why it fails, at
+          least three comparator countries including one instructive failure, a sourced
+          statistical annex, and the domestic record of what has already been tried.
+        </span>
+      </div>
+    </li>
+    <li>
+      <div>
+        <strong>Policy paper</strong>
+        <span>
+          A think-tank product with costed mechanisms and a steelmanned trade-offs
+          section naming who loses. No paper has been compiled yet.
+        </span>
+      </div>
+    </li>
+    <li>
+      <div>
+        <strong>Program for government</strong>
+        <span>
+          The planks rolled up, checked for cross-plank coherence and fiscal consistency.
+          No promise without a mechanism. <a href={href('pipeline/')}>The pipeline in full</a>.
+        </span>
+      </div>
+    </li>
+  </ol>
+
+  <hr class="mk-rule" />
+
+  <div class="mk-section-head">
+    <h2>What the evidence has turned up</h2>
+    <p>Findings from the two areas whose research has started — including the one that cuts against us.</p>
+  </div>
+
+  <ul class="mk-findings">
+    <li class="mk-finding">
+      <span class="mk-figure">+73.4%</span>
+      <p>
+        The CBS sub-index for brokerage, contract and insurance costs, over the decade to
+        November 2025 — against 17.9% general inflation. The cost of <em>moving</em> is
+        rising four times faster than everything else.
+      </p>
+      <p><a href={href('policy/rental-market/research/04-data/')}>The statistical annex →</a></p>
+    </li>
+    <li class="mk-finding">
+      <span class="mk-figure">2017</span>
+      <p>
+        The Fair Rental Law’s broker-fee provision failed, by the government’s own
+        admission: a Ministry of Justice survey found it did not improve tenants’
+        position, because brokers may still charge tenants directly.
+      </p>
+      <p><a href={href('policy/rental-market/research/02-israeli-law/')}>The law as it stands →</a></p>
+    </li>
+    <li class="mk-finding">
+      <span class="mk-figure">€461</span>
+      <p>
+        Vienna’s Klimaticket — the canonical fare-reform success — ended, with the price
+        raised from €365 on 1 January 2026. We went looking for an instructive failure
+        and found it inside our own best case.
+      </p>
+      <p><a href={href('policy/public-transport/research/comparative/vienna/')}>The Vienna case →</a></p>
+    </li>
+    <li class="mk-finding" data-kind="counter">
+      <span class="mk-figure">~80%</span>
+      <p>
+        Of renters reported satisfaction with their dwelling in 2022. This is the
+        strongest evidence <em>against</em> the rental plank’s thesis, and it belongs in
+        the main text rather than a footnote.
+      </p>
+      <p><a href={href('policy/rental-market/research/04-data/')}>How we reconcile it →</a></p>
+    </li>
+  </ul>
+
+  <hr class="mk-rule" />
+
+  <div class="mk-section-head">
+    <h2>What this is not</h2>
+  </div>
+
+  <div class="mk-note">
+    <p>
+      Not a real political party. Not an endorsement of any existing party or bloc. Not a
+      claim that AI should make policy — <strong>the human sets the values and the
+      priorities</strong>; the AI does research, drafting and stress-testing, and gets
+      told when it is wrong.
+    </p>
+    <p style="margin-bottom:0;">
+      Think of it as civic engagement by other means: instead of casting a blank protest
+      ballot, writing down — rigorously — what a platform worth voting for would actually
+      contain. Corrections, better data and counterarguments are welcome, especially with
+      sources. <a href="https://github.com/danielrosehill/MK-Claude/issues">Open an issue</a>.
+    </p>
+  </div>
+</StarlightPage>

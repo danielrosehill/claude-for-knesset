@@ -18,6 +18,10 @@ Four stages, each with a gate (full detail in the repo's `PIPELINE.md`):
 
 Each policy area has a stage tracker at `policy/<area>/README.md`. Keep it current.
 
+Paths above are relative to the repository's **content root**. Most repositories put that at
+the root; some publish their content as a site and put it elsewhere. If the repository's
+`CLAUDE.md` declares a content root, resolve every path in this skill against it.
+
 ## Evidence standards
 
 - **Never invent a number.** If you cannot find a source, write `[UNVERIFIED — verify before publication]`. Unverified claims block stage advancement.
