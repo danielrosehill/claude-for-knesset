@@ -1,5 +1,7 @@
 # Claude For Knesset 🇮🇱🤖
 
+![A cheerful robot addressing a crowd from a campaign podium](./assets/cover.jpg)
+
 *An AI-assisted political platform for a party that doesn't exist.*
 
 ## What is this?
@@ -40,14 +42,21 @@ Everything is version-controlled, so the platform's evolution — including chan
 testimonies/       Stage 1 — dated first-person accounts (raw/ is gitignored)
 policy/<area>/     Stages 2–3 — research evidence base + Typst/PDF policy paper
 platform/          Stage 4 — the program for government
+context/           The election, the parties, and policy comparison matrices
 templates/         Typst house template for policy papers
 plugins/           The policy-development-assistant Claude Code plugin
 PIPELINE.md        The methodology in full
 ```
 
+## Positioning against the field
+
+`context/` holds the political ground truth: the 2026 election, the outgoing 25th Knesset, the parties running, and — in `context/matrices/` — a policy comparison matrix per area, showing what every party proposes, what they did when they held the ministry, and where our proposals sit against theirs.
+
+The matrices exist to make the platform falsifiable. A proposal that turns out to be already law, already promised by four other parties, or dead on arrival with a blocking bloc gets reframed or dropped. Our own column is rated on the same scale as everyone else's; where another party has the better instrument, the matrix says so.
+
 ## The plugin
 
-The pipeline is automated by a Claude Code plugin shipped in this repo, **[policy-development-assistant](./plugins/policy-development-assistant/)**, with a command per stage (`/capture-testimony`, `/research-policy`, `/draft-paper`, `/update-platform`) and a `policy-methodology` skill encoding the evidence standards. Install it in your own project with:
+The pipeline is automated by a Claude Code plugin shipped in this repo, **[policy-development-assistant](./plugins/policy-development-assistant/)**, with a command per stage (`/capture-testimony`, `/research-policy`, `/draft-paper`, `/update-platform`), a `policy-methodology` skill encoding the evidence standards, and a bundled MCP server ([israel-statistics-mcp](https://github.com/reuvenaor/israel-statistics-mcp)) giving Claude direct tool access to Israeli Central Bureau of Statistics (הלמ"ס) index data — no API key needed. Install it in your own project with:
 
 ```
 /plugin marketplace add danielrosehill/claude-for-knesset
