@@ -1,5 +1,5 @@
 ---
-description: Build the evidence base for a policy area — data, legislation, comparative review (stage 2 of the pipeline)
+description: Build the evidence base for a policy area — data, legislation, comparative and domestic research (stage 2 of the pipeline)
 argument-hint: <policy-area>
 ---
 
@@ -12,12 +12,15 @@ Build the research evidence base for the policy area: **$ARGUMENTS**. Follow the
 
 ## Outputs
 
-Create these four documents in `policy/$ARGUMENTS/research/`. Use web search and web fetch extensively; this stage is research, not recall.
+Create these documents in `policy/$ARGUMENTS/research/`. Use web search and web fetch extensively; this stage is research, not recall.
 
 1. **`01-problem-statement.md`** — What is broken, synthesizing the testimony (evidence of *experience*) with quantified data (evidence of *prevalence*). Every "how big / how many / how much" claim needs a number with a source.
-2. **`02-israeli-law.md`** — The legislation that exists: official name, year, amendment number, the specific provisions relevant here, what the law promised, and — with evidence — where enforcement fails on the ground. Include Knesset Research and Information Center reports and State Comptroller findings where they exist.
-3. **`03-comparative.md`** — How at least three other countries handle this, chosen for relevance not convenience. For each: the specific instrument (law/regulator/register), what it does mechanically, evidence of results, and transferability caveats for the Israeli context.
-4. **`04-data.md`** — The statistical annex: every dataset used, with source, year, exact figure, and a link. Preferred sources in order: CBS (הלמ"ס), Bank of Israel, Knesset RIC, State Comptroller, OECD, peer-reviewed research, quality journalism (flagged as such).
+2. **`02-israeli-law.md`** — The legislation that exists *today*: official name, year, amendment number, the specific provisions relevant here, what the law promised, and — with evidence — where enforcement fails on the ground. Include Knesset Research and Information Center reports and State Comptroller findings where they exist.
+3. **`03-comparative.md`** + **`comparative/<jurisdiction>.md`** — How other countries have tackled this. **Load the `comparative-policy-research` skill and follow its method**: comparators selected for mechanism not prestige, one case-study file per comparator, at least one instructive failure, and an explicit transferability judgement for each.
+4. **`04-data.md`** — The statistical annex: every dataset used, with source, year, exact figure, and a link. Preferred sources in order: CBS (הלמ"ס), Bank of Israel, Knesset RIC, State Comptroller, OECD, peer-reviewed research, quality journalism (flagged as such). The `israel-statistics` MCP server gives direct access to CBS indices.
+5. **`05-domestic-record.md`** (+ `domestic/` case files where warranted) — What has already been tried here: bills that passed and bills that fell, government decisions, shelved committee reports, pilots, repeals, and which parties and ministries backed or blocked each. **Load the `domestic-policy-research` skill and follow its method.** Its most important outputs are the named veto player and the recurring failure mode.
+
+Documents 3 and 5 are two halves of the same question — *what has worked elsewhere* and *what has already failed here* — and the policy paper cannot be written honestly without both.
 
 ## Rules
 

@@ -12,7 +12,7 @@ This project turns lived experience into a credible program for government. Its 
 Four stages, each with a gate (full detail in the repo's `PIPELINE.md`):
 
 1. **Testimony** (`testimonies/`) — dated, cleaned, redacted first-person accounts. Raw material never committed.
-2. **Research** (`policy/<area>/research/`) — problem statement, Israeli law review, comparative review, data annex.
+2. **Research** (`policy/<area>/research/`) — problem statement, Israeli law review, comparative review, data annex, domestic record. The comparative and domestic halves have their own method skills: `comparative-policy-research` and `domestic-policy-research`.
 3. **Paper** (`policy/<area>/paper/`) — Typst + PDF using `templates/policy-paper.typ`.
 4. **Platform** (`platform/program-for-government.md`) — the distilled meta-proposal.
 
