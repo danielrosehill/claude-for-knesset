@@ -1,0 +1,14 @@
+{
+  "name": "claude-for-knesset",
+  "owner": {
+    "name": "Daniel Rosehill",
+    "url": "https://github.com/danielrosehill"
+  },
+  "plugins": [
+    {
+      "name": "policy-development-assistant",
+      "source": "./plugins/policy-development-assistant",
+      "description": "Pipeline for evidence-based policy development: testimony capture → research → Typst policy papers → program for government."
+    }
+  ]
+}

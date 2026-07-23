@@ -1,0 +1,6 @@
+# Raw testimony material never gets committed — cleaned versions only
+testimonies/raw/*
+!testimonies/raw/.gitkeep
+
+# Typst build cache
+**/.typst-cache/

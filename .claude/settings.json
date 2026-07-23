@@ -1,0 +1,13 @@
+{
+  "extraKnownMarketplaces": {
+    "claude-for-knesset": {
+      "source": {
+        "source": "github",
+        "repo": "danielrosehill/claude-for-knesset"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "policy-development-assistant@claude-for-knesset": true
+  }
+}

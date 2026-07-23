@@ -1,0 +1,11 @@
+{
+  "name": "policy-development-assistant",
+  "description": "A policy development pipeline for Claude Code: turn raw first-person testimony into cleaned dated records, evidence-based research (CBS data, legislation, comparative policy), think-tank-style Typst/PDF policy papers, and a rolled-up program for government.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Daniel Rosehill",
+    "url": "https://github.com/danielrosehill"
+  },
+  "homepage": "https://github.com/danielrosehill/claude-for-knesset",
+  "keywords": ["policy", "research", "typst", "civic-tech", "israel"]
+}

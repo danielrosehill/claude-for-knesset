@@ -25,14 +25,40 @@ Think of it as **civic engagement by other means**: instead of casting a blank p
 
 ## Methodology
 
-Each policy area is developed as a document (or set of documents) in this repo:
+Policy is developed through a four-stage pipeline — from first-person testimony, through an evidence base (CBS data, actual legislation, comparative policy), to think-tank-style policy papers (Typst/PDF), and finally a rolled-up program for government. Full detail in [PIPELINE.md](./PIPELINE.md).
 
-1. **Problem statement** — what's broken, with evidence
-2. **Comparative review** — how other countries handle it
-3. **Proposal** — specific, costed, implementable measures
-4. **Trade-offs & objections** — steelmanned counterarguments and who bears the costs
+1. **Testimony** (`testimonies/`) — dated, cleaned first-person accounts; raw material stays private
+2. **Research** (`policy/<area>/research/`) — problem statement with quantified data, review of existing Israeli legislation and its enforcement gap, comparative review of other countries, sourced statistical annex
+3. **Paper** (`policy/<area>/paper/`) — a compiled policy paper with costed proposals and steelmanned trade-offs
+4. **Platform** (`platform/`) — the program for government, distilled from the papers with cross-plank coherence and fiscal checks
 
 Everything is version-controlled, so the platform's evolution — including changes of mind — is public history.
+
+## Repository structure
+
+```
+testimonies/       Stage 1 — dated first-person accounts (raw/ is gitignored)
+policy/<area>/     Stages 2–3 — research evidence base + Typst/PDF policy paper
+platform/          Stage 4 — the program for government
+templates/         Typst house template for policy papers
+plugins/           The policy-development-assistant Claude Code plugin
+PIPELINE.md        The methodology in full
+```
+
+## The plugin
+
+The pipeline is automated by a Claude Code plugin shipped in this repo, **[policy-development-assistant](./plugins/policy-development-assistant/)**, with a command per stage (`/capture-testimony`, `/research-policy`, `/draft-paper`, `/update-platform`) and a `policy-methodology` skill encoding the evidence standards. Install it in your own project with:
+
+```
+/plugin marketplace add danielrosehill/claude-for-knesset
+/plugin install policy-development-assistant@claude-for-knesset
+```
+
+## Policy areas
+
+| Area | Stage |
+|------|-------|
+| [Rental market & tenancy law](./policy/rental-market/) | 1 — testimony captured |
 
 ## Contributing
 
